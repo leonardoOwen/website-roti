@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- Remixicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Kokiro — Roti Panggang Rumahan</title>
+</head>
+<body>  
+
+    <!-- Promo Bar -->
+    <div class="promo" id="promo">
+        <p class="promo__text">
+            <i class="ri-truck-line"></i>
+            Gratis ongkir area Jakarta untuk belanja di atas Rp100.000 — cukup pesan lewat WhatsApp
+        </p>
+        <button class="promo__close" id="promo-close" aria-label="Tutup pengumuman">
+            <i class="ri-close-line"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">Kokiro</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Beranda</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#menu" class="nav__link">Menu</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Tentang Kami</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#favorite" class="nav__link">Favorit</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#visit" class="nav__link">Lokasi</a>
+                    </li>
+                </ul>
+
+                <!-- Button Tutup -->
+                 <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                 </div>
+
+                 <img src="assets/img/bread-4.png" alt="" class="nav__img-1">
+                 <img src="assets/img/bread-1.png" alt="" class="nav__img-2">
+            </div>
+
+            <div class="nav__actions">
+                <button class="nav__cart" id="cart-open" aria-label="Buka keranjang">
+                    <i class="ri-shopping-basket-2-line"></i>
+                    <span class="nav__cart-count" id="cart-count">0</span>
+                </button>
+
+                <!-- Button Hamburger -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-2-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Home -->
+        <section class="home section" id="home">
+            <img src="assets/img/home-bg.jpg" alt="" class="home__bg">
+            <div class="home__shadow"></div>
+
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="eyebrow">Toko roti rumahan &middot; sejak 2019</span>
+
+                    <h1 class="home__title">
+                        Roti Panggang <br> Setiap Pagi 
+                    </h1>
+
+                    <p class="home__text">
+                        dibikin malam hari, dipanggang subuh, dan sampai ke tanganmu
+                        selagi masih hangat.
+                    </p>
+
+                    <div class="home__buttons">
+                        <a href="#menu" class="button">Lihat Menu</a>
+                        <a href="#visit" class="button button--ghost">Cara Pesan</a>
+                    </div>
+
+                    <img src="assets/img/bread-1.png" alt="" class="home__bread">
+                </div>
+
+                <div class="home__image">
+                    <img src="assets/img/home-bread.png" alt="Roti hangat Kokiro" class="home__img">
+
+                    <div class="stamp stamp--home">
+                        <span>Panggang</span>
+                        <strong>Fresh</strong>
+                        <span>Hari Ini</span>
+                    </div>
+                </div>
+
+                <footer class="home__footer">
+                    <div class="home__location">
+                        <i class="ri-map-pin-line"></i>
+                        <span>Jl. Swadaya 48 <br> Jakarta , East Jakarta</span>
+                    </div>
+
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/kokiro.id" target="_blank" rel="noopener" aria-label="Facebook Kokiro">
+                            <i class="ri-facebook-circle-line"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/arnando_owen/" target="_blank" rel="noopener" aria-label="Instagram Kokiro">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="https://wa.me/6281292449473" target="_blank" rel="noopener" aria-label="WhatsApp Kokiro">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+        <!-- Menu / Catalog -->
+        <section class="catalog section" id="menu">
+            <span class="eyebrow eyebrow--center">Daftar Roti</span>
+            <h2 class="section__title">Pilih, Tambah ke Keranjang</h2>
+
+            <div class="catalog__toolbar container">
+                <div class="catalog__tabs" id="catalog-tabs">
+                    <button class="catalog__tab catalog__tab--active" data-category="Semua">Semua</button>
+                    <button class="catalog__tab" data-category="Roti Manis">Roti Manis</button>
+                    <button class="catalog__tab" data-category="Roti Tawar">Roti Tawar</button>
+                    <button class="catalog__tab" data-category="Pastry">Pastry</button>
+                    <button class="catalog__tab" data-category="Kue">Kue</button>
+                </div>
+
+                <label class="catalog__search">
+                    <i class="ri-search-line"></i>
+                    <input type="text" id="catalog-search" placeholder="Cari roti...">
+                </label>
+            </div>
+
+            <div class="catalog__container container">
+                <div class="catalog__grid" id="catalog-grid">
+                    <!-- Produk dirender lewat main.js dari data PRODUCTS -->
+                </div>
+
+                <p class="catalog__empty" id="catalog-empty" hidden>
+                    Roti yang kamu cari sedang tidak tersedia. Coba kata kunci lain.
+                </p>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <span class="eyebrow">Dari Dapur Kami</span>
+                    <h2 class="section__title">Tentang Kokiro</h2>
+                    <p class="about__description">
+                        Kokiro dimulai dari dapur rumah dengan satu oven kecil dan resep keluarga.
+                        Sekarang kami tetap memanggang dengan cara yang sama: bahan-bahan yang jelas asalnya,
+                        tanpa pengawet, dan selalu habis di hari yang sama.
+                    </p>
+                    <p class="about__description">
+                        Pesan lewat WhatsApp, ambil di toko atau minta diantar — kamu yang atur,
+                        kami yang urus dapurnya.
+                    </p>
+
+                    <div class="about__stats">
+                        <div class="about__stat">
+                            <strong>5+</strong>
+                            <span>Tahun Memanggang</span>
+                        </div>
+                        <div class="about__stat">
+                            <strong>20+</strong>
+                            <span>Varian Roti</span>
+                        </div>
+                        <div class="about__stat">
+                            <strong>100%</strong>
+                            <span>Dipanggang Manual</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/6281292449473" target="_blank" rel="noopener" class="button">Sapa Kami di WhatsApp</a>
+
+                    <img src="assets/img/bread-2.png" alt="" class="about__bread">
+                </div>
+
+                <img src="assets/img/about-bread.png" alt="Roti buatan Kokiro" class="about__img">
+            </div>
+        </section>
+
+        <!-- Favorites -->
+        <section class="favorite section" id="favorite">
+            <span class="eyebrow eyebrow--center">Paling Dicari</span>
+            <h2 class="section__title">Favorit Pelanggan</h2>
+
+            <div class="favorite__container container" id="favorite-grid">
+                <!-- Kartu favorit dirender lewat main.js dari data FAVORITES -->
+            </div>
+        </section>
+
+        <!-- Testimoni -->
+        <section class="testimony section">
+            <div class="testimony__container container grid">
+                <article class="testimony__card">
+                    <i class="ri-double-quotes-l"></i>
+                    <p>Langganan roti sobek coklatnya dari 2 tahun lalu. Masih empuk sampai sore.</p>
+                    <span>— Nadia, Karawang</span>
+                </article>
+
+                <article class="testimony__card">
+                    <i class="ri-double-quotes-l"></i>
+                    <p>Pesan pagi lewat WA, siang udah bisa diambil. Rasanya juga konsisten.</p>
+                    <span>— Rangga, Sawangan</span>
+                </article>
+
+                <article class="testimony__card">
+                    <i class="ri-double-quotes-l"></i>
+                    <p>Croissant-nya beneran renyah di luar, bukan cuma lembek dikasih gula.</p>
+                    <span>— Della, Cimanggis</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Visit -->
+        <section class="visit section" id="visit">
+            <img src="assets/img/visit-bg.jpg" alt="" class="visit__bg">
+            <div class="visit__shadow"></div>
+
+            <div class="visit__container container grid">
+                <div class="visit__data">
+                    <span class="eyebrow">Kunjungi Toko</span>
+                    <h2 class="section__title">Cara Pesan Roti</h2>
+
+                    <div class="visit__steps">
+                        <div class="visit__step">
+                            <span class="visit__step-num">1</span>
+                            <div>
+                                <h3>Pilih Roti</h3>
+                                <p>Tambahkan roti pilihanmu ke keranjang di bagian Menu.</p>
+                            </div>
+                        </div>
+
+                        <div class="visit__step">
+                            <span class="visit__step-num">2</span>
+                            <div>
+                                <h3>Kirim Pesanan</h3>
+                                <p>Tekan "Checkout via WhatsApp", pesan otomatis tersusun rapi.</p>
+                            </div>
+                        </div>
+
+                        <div class="visit__step">
+                            <span class="visit__step-num">3</span>
+                            <div>
+                                <h3>Ambil atau Diantar</h3>
+                                <p>Kami konfirmasi waktu ambil di toko atau jadwal antar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visit__card">
+                    <h3>Jam Buka</h3>
+                    <ul class="visit__hours">
+                        <li><span>Senin – Jumat</span><span>06.00 – 20.00</span></li>
+                        <li><span>Sabtu – Minggu</span><span>08.00 – 18.10</span></li>
+                    </ul>
+
+                    <h3>Alamat</h3>
+                    <p><i class="ri-map-pin-line"></i> Jl. Swadaya 48, East Jakarta</p>
+
+                    <a href="https://wa.me/6281292449473" target="_blank" rel="noopener" class="button button--block">
+                        <i class="ri-whatsapp-line"></i> Pesan Sekarang
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__brand">
+                <a href="#home" class="nav__logo">Kokiro</a>
+                <p>Roti panggang rumahan, dari dapur kami ke meja makanmu.</p>
+            </div>
+
+            <div class="footer__column">
+                <h3>Jelajah</h3>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#favorite">Favorit</a></li>
+                    <li><a href="#visit">Lokasi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__column">
+                <h3>Kontak</h3>
+                <ul>
+                    <li><i class="ri-whatsapp-line"></i> +62 812-9244-9473</li>
+                    <li><i class="ri-map-pin-line"></i> East Jakarta</li>
+                    <li><i class="ri-time-line"></i> 08.00 – 18.10</li>
+                </ul>
+            </div>
+
+            <div class="footer__column">
+                <h3>Ikuti Kami</h3>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/kokiro.id" target="_blank" rel="noopener" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="https://www.instagram.com/arnando_owen/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="https://wa.me/6281292449473" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer__copy">&copy; <span id="year"></span> Kokiro. Dibuat dengan tepung dan kesabaran.</p>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart" id="cart">
+        <div class="cart__overlay" id="cart-overlay"></div>
+
+        <aside class="cart__panel" aria-label="Keranjang belanja">
+            <div class="cart__header">
+                <h3><i class="ri-shopping-basket-2-line"></i> Keranjang</h3>
+                <button class="cart__close" id="cart-close" aria-label="Tutup keranjang">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+
+            <div class="cart__items" id="cart-items">
+                <!-- Item keranjang dirender lewat main.js -->
+            </div>
+
+            <p class="cart__empty" id="cart-empty">
+                Keranjang masih kosong. Yuk pilih roti dulu di menu.
+            </p>
+
+            <div class="cart__footer">
+                <div class="cart__total">
+                    <span>Total</span>
+                    <strong id="cart-total">Rp0</strong>
+                </div>
+                <a href="#" target="_blank" rel="noopener" class="button button--block" id="cart-checkout">
+                    <i class="ri-whatsapp-line"></i> Checkout via WhatsApp
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Scroll Up -->
+    <a href="#home" class="scrollup" id="scroll-up" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
